@@ -1,18 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import{ Router, RouterModule} from '@angular/router'
 
-
-import { AppComponent } from './app.component';
+import * as c from './'
+import { AppRoutes } from './app.routing';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    c.AppComponent,
+    c.MainComponent,
+    c.HomeComponent,
+    c.AboutComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule,
+    AppRoutes
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [c.AppComponent]
 })
 export class AppModule { }
