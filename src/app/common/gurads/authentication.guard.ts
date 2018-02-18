@@ -13,7 +13,7 @@ export class AuthenticationGuard implements CanActivate, CanActivateChild {
     if (this.adalSvc.userInfo.authenticated) {
       return true;
     } else {
-      this.router.navigate(['/login'], { queryParams: { retrunUrl: state.url } });
+      this.router.navigate(['/login']); 
     }
   }
   canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
